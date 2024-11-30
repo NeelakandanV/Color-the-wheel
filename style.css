@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+}
+
+.MainParent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border: 2px solid black;
+    width: 40vw;
+    height: 50vh;
+    border-radius: 15px;
+}
+
+.circle{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 20vw;
+    height: 25vh;
+    animation: moving 2s linear 1s infinite;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#Red{
+    background-color: red;
+    color: white;
+    margin: 3px;
+    border: 2px solid black;
+    padding: 5px;
+    box-shadow: 2px 2px red;
+}
+
+#Red:hover,#Blue:hover,#Green:hover{
+    border: 2px inset black;
+    cursor: pointer;
+    color: black;
+    transform: translateY(-2px);
+    transition: all .5s;
+}
+
+#Blue{
+    background-color: blue;
+    color: white;
+    margin: 3px;
+    border: 2px solid black;
+    padding: 5px;
+    box-shadow: 2px 2px blue;
+}
+
+#Green{
+    background-color: green;
+    color: white;
+    margin: 3px;
+    border: 2px solid black;
+    padding: 5px;
+    box-shadow: 2px 2px green;
+}
+
+#Reset{
+    background-color: rgb(172, 201, 226);
+    margin: 10px auto auto 50px;
+    border: 2px solid black;
+    padding: 5px;
+    transition: .5s ease;
+}
+
+#Reset:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#Color{
+    margin: 10px 0px;
+    padding: 5px;
+}
+
+@keyframes moving {
+    0%   {transform: translateX(0px);}
+    25%  {transform: translateX(-25px);}
+    50%  {transform: translateY(25px);}
+    75%  {transform: translateX(25px);}
+    100% {transform: translateY(-25px)}
+}
+
+
+/*For Mobiles and Tablets*/
+@media only screen and (max-width:720px){
+    .box{
+        width: 80vw;
+        height: 60vh;
+    }
+    
+    .circle{
+        width: 50vw;
+        height: 40vh;
+    }
+}
